@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>登陆页面</title>
+		<link rel="stylesheet" href="css/public.css" />
+		<link rel="stylesheet" href="css/index.css" />
+		<link rel="stylesheet" href="icon/iconfont.css" />
+		<style>
+			.login{
+				background:#fff;
+			}
+			.login-con{
+				width:460px;
+				margin:0 auto;
+				/*background:#333;*/
+				text-align:center;
+			}
+			.login-con .logo{
+				display:block;
+				padding-top:100px;
+				padding-bottom:80px;
+			}
+			.login-con input{
+				display:block;
+				height:48px;
+				width:398px;
+				border:1px solid #cccccc;
+				padding:0 30px;
+				color:#333;
+				margin:20px auto;
+			}
+			.login-con button{
+				display:block;
+				height:50px;
+				width:460px;
+				margin:20px auto;
+				background:orange;
+				font-size:14px;
+			}
+			.login-con input{
+				border-radius:4px;
+			};
+			.login-con p .firsta{
+				color:#000;
+			}
+			.login-con p .firsta:after{
+				content:'';
+				display:inline-block;
+				background:#ccc;
+				height:9px;
+				width:1px;
+				margin:0 20px;
+			}
+			.login-con p a:last-child{
+				color:orange;
+			}
+			.login-con h1{
+				margin-top:40px;
+				margin-bottom:28px;
+				font-size:14px;
+				color:#333;
+			}
+			.login-con h1 span{
+				font-size: 1.6rem;
+			    color: #333;
+			    display: inline-block;
+			    background-color: #fff;
+			    padding: 0 18px;
+			}
+			.login-con h1:after{
+				content: '';
+			    display: block;
+			    width: 100%;
+			    height: 1px;
+			    background-color: #f0f0f0;
+			    margin-top: -8px;
+			}
+			.login-con .shut{
+				width:100%;
+				text-align:center;
+				margin-top:14px;
+				margin-bottom:40px;
+			}
+			.login-con .shut img{
+				display:inline-block;
+			}
+			.login-con .shut img:first-child{
+				margin-left:15px;
+			}
+			/*.foot{
+				padding-top:30px;
+			}*/
+		</style>
+	</head>
+	<body>
+		<div class="nav"></div>
+		<div class='top'></div>
+		<div class="login">
+			<div class="login-con">
+				<img src="img/logo.png" alt="" class="logo"/>
+				<input type="text" placeholder="请输入账号或手机号" id='sid'/>
+				<input type="password" placeholder="请输入密码" id='spwd'/>
+				<button id='btn'>立即登录</button>
+				<p>
+					<a href="#" class='firsta' style="color:#000">忘记密码</a>
+					<a href="#">注册账号</a>
+				</p>
+				<h1>
+					<span>快捷登陆</span>
+				</h1>
+				<div class="shut">
+					<a href="#">
+						<img src="img/qq.jpg" alt="" />
+					</a>
+					<a href="#">
+						<img src="img/webo.jpg" alt="" />
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class='foot'></div>
+		<div class='copy'></div>
+	</body>
+</html>
+<script src='js/jquery-1.11.1.min.js'></script>
+<script>
+	$('.nav').load('index.html .nav',function(){
+		$(window).scroll(function(){
+			if($(document).scrollTop()>300){
+				$('.nav').css('display','block');
+				$('.nav').click(function(){
+					$(this).show(1000,function(){
+						$(document).scrollTop(0);
+					})
+				});
+			}else{
+				$('.nav').css('display','none');
+			}
+		})
+	});
+	$('.top').load('index.html .top');
+	$('.foot').load('index.html .foot');
+	$('.copy').load('index.html .copy');
+</script>
